@@ -15,3 +15,6 @@ export const updateCampaign = (id: number, data: {
 
 export const pledgeCampaign = (id: number, amount: number) =>
   API.post(`/campaigns/${id}/pledge`, { amount });
+
+export const translateText = (q: string, target: string) =>
+  API.post('/ml/translate', { q, target });
