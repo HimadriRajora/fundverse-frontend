@@ -18,3 +18,6 @@ export const pledgeCampaign = (id: number, amount: number) =>
 
 export const translateText = (q: string, target: string) =>
   API.post('/ml/translate', { q, target });
+
+export const fetchMyCampaigns     = (uid:number) => API.get(`/users/${uid}/campaigns`)
+export const fetchPledgedCampaigns= (uid:number) => API.get(`/users/${uid}/pledges`)
